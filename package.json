@@ -1,0 +1,17 @@
+{
+  "name": "netwatch-client",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "env": "^0.0.2",
+    "mqtt": "^5.8.0",
+    "ping": "^0.4.4"
+  }
+}
