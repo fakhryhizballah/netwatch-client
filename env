@@ -1,0 +1,12 @@
+#--------------------------------------------------------------------
+# Client Setup
+#--------------------------------------------------------------------
+MqttHost ="mqtt://localhost"
+MqttPort = 1883
+MqttUsername = 
+MqttPassword = 
+MqttClientId =
+MqttClientId2 =
+
+TZ='Asia/Pontianak'
+setInterval = 12000
