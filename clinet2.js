@@ -25,11 +25,9 @@ client.on("connect", () => {
 });
 
 client.on("message", (topic, message) => {
-    // message is Buffer
-    // console.log(message.toString());
+
     if (topic == "gateway/" + process.env.MqttClientId2) {
         console.log("client Ping");
-        // client.publish("gateway/" + message, 'ini adalah pesan dari server');
         let clientGroup = JSON.parse(message.toString());
         for (let e of clientGroup.members) {
             ping.sys.probe(e.ip, function (isAlive) {

@@ -25,11 +25,7 @@ client.on("connect", () => {
 });
 
 client.on("message", (topic, message) => {
-    // message is Buffer
-    // console.log(message.toString());
     if (topic == "gateway/" + process.env.MqttClientId) {
-        console.log("client Ping");
-        // client.publish("gateway/" + message, 'ini adalah pesan dari server');
         let clientGroup = JSON.parse(message.toString());
         for (let e of clientGroup.members) {
             ping.sys.probe(e.ip, function (isAlive) {
@@ -44,7 +40,6 @@ client.on("message", (topic, message) => {
         }
     }
 });
-setInterval(function () {
-    //code goes here that will be run every 5 seconds.    
+setInterval(function () { 
     client.publish("clinet/Online", process.env.MqttClientId)
 }, process.env.setInterval);
